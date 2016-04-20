@@ -1,0 +1,552 @@
+@charset "UTF-8";
+/*!
+**  Author: Kale Chao | FakeCityMan
+**  Blog: kalechao87@github.io
+**/
+/*! normalize.css v3.0.0 | Base | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+/*! normalize.css v3.0.0 | Links | MIT License | git.io/normalize */
+a {
+  background: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/*! normalize.css v3.0.0 | Typography | MIT License | git.io/normalize */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/*! normalize.css v3.0.0 | Embedded Content | MIT License | git.io/normalize */
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/*! normalize.css v3.0.0 | Figures | MIT License | git.io/normalize */
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/*! normalize.css v3.0.0 | Forms | MIT License | git.io/normalize */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+/*! normalize.css v3.0.0 | Tables | MIT License | git.io/normalize */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+img {
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+* Hide visually and from screenreaders, but maintain layout
+*/
+.invisible {
+  visibility: hidden;
+}
+
+/**
+ * Clearfix helper
+ * Used to contain floats: http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+ Author's custom styles
+ ========================================================================== */
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* ==========================================================================
+ 瀹氫箟鍙橀噺
+ ========================================================================== */
+/* ==========================================================================
+瀹氫箟鍙橀噺缁撴潫
+========================================================================== */
+body {
+  font-family: 'Avenir Next', 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #3a34af;
+  color: #fff;
+  overflow: hidden;
+  font-size: 24px;
+}
+
+.block-img {
+  display: block;
+  max-width: 100%;
+}
+
+.ab-img {
+  position: absolute;
+}
+
+.ab-block-img {
+  display: block;
+  position: absolute;
+  max-width: 100%;
+}
+
+.ab-element {
+  position: absolute;
+}
+
+.hvcenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.hcenter {
+  position: absolute;
+  left: 50%;
+  -moz-transform: translate3d(-50%, 0, 0);
+  -ms-transform: translate3d(-50%, 0, 0);
+  -webkit-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
+}
+
+.vcenter {
+  position: absolute;
+  top: 50%;
+  -moz-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+
+.fixed-bg {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../images/universal-bg.jpg");
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#music-control {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 58px;
+  height: 58px;
+  margin: 20px;
+}
+
+#music-control-main, .music-control-icon {
+  position: absolute;
+}
+
+.music-control-icon {
+  display: block;
+}
+
+#logo-group {
+  top: 44px;
+  left: 106px;
+  width: 430px;
+  height: 466px;
+  z-index: 10;
+}
+
+#slogan {
+  visibility: hidden;
+}
+
+#logo {
+  top: 395px;
+  left: 93px;
+  visibility: hidden;
+}
+
+#scan {
+  top: 434px;
+  left: 640px;
+  z-index: 10;
+}
+
+#arrow-up {
+  bottom: 10px;
+  visibility: hidden;
+  z-index: 10;
+}
+
+#cover-content1 {
+  top: 573px;
+  left: 301px;
+}
+
+#cover-content2 {
+  top: 627px;
+  left: 163px;
+}
+
+#cover-content3 {
+  top: 676px;
+  left: 163px;
+}
+
+#cover-content4 {
+  top: 723px;
+  left: 193px;
+}
+
+#cover-content5 {
+  top: 776px;
+  left: 233px;
+}
+
+#cover-content6 {
+  top: 823px;
+  left: 121px;
+}
+
+#cover-content7 {
+  top: 873px;
+  left: 201px;
+}
+
+#page3-title {
+  top: 117px;
+  left: 43px;
+}
+
+#page3-content {
+  top: 248px;
+  left: 43px;
+}
+
+#page3-des {
+  bottom: 36px;
+  left: 42px;
+}
+
+#page4-content {
+  top: 104px;
+  left: 67px;
+}
+
+#form-container {
+  top: 372px;
+  left: 59px;
+  width: 522px;
+  height: 424px;
+  background-image: url("../images/form-bg.png");
+}
+
+#apply-btn {
+  top: 888px;
+  left: 212px;
+}
+
+.input-element {
+  left: 160px;
+  width: 290px;
+  height: 48px;
+  border: none;
+  color: #0036b2;
+  padding-left: 12px;
+}
+
+#city {
+  top: 206px;
+}
+
+#name {
+  top: 265px;
+}
+
+#phone {
+  top: 327px;
+}
+
+#sucess-container {
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+}
+
+#page5-title {
+  top: 103px;
+  left: 223px;
+}
+
+#page5-content {
+  top: 194px;
+  left: 105px;
+}
+
+#page5-des {
+  top: 728px;
+  left: 136px;
+}
+
+#share-btn {
+  top: 888px;
+  left: 212px;
+}
+
+#share-container {
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+}
+
+#share-arrow {
+  top: 78px;
+  left: 440px;
+}
+
+#share-content {
+  top: 380px;
+  left: 98px;
+}
+
+#cover, #page3, #page4, #sucess-container, #page5, #share-container {
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=main.css.map */

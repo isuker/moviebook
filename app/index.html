@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Kale Chao | FakeCityMan |  http://kalechao87.github.io/">
+        <meta http-equiv="Expires" content="-1">
+        <meta http-equiv="pragram" content="no-cache">  <!--禁止浏览器从本地计算机缓存访问页面内容，这样设定，访问者将无法脱机浏览-->
+        <meta http-equiv="Cache-Control" content="no-siteapp" />  <!--禁止百度转码-->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>  <!--优先使用IE最新版和Chrome，避免IE使用兼容模式-->
+        <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 启用 WebApp 全屏模式，伪装App离线应用，删除苹果默认的工具栏和菜单栏 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> <!--隐藏状态栏/设置状态栏颜色：只有在开启WebApp全屏模式时才生效。content的值为default | black | black-translucent 。-->
+        <meta name="format-detection" content="telephone=no" /> <!--忽略数字自动识别为电话号码-->
+        <meta name="format-detection" content="email=no" /> <!--忽略识别邮箱-->
+        <title>暖馨母亲节——影谱</title>
+        <!-- build:css css/main.min.css -->
+        <link rel="stylesheet" href="css/main.css">
+        <!-- endbuild -->
+        <script type="text/javascript">
+          if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+              var version = parseFloat(RegExp.$1);
+              if(version>2.3){
+                  var phoneScale = parseInt(window.screen.width)/640;
+                  document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+              }else{
+                  document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+              }
+          }else{
+              document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+          }
+        </script><!--适配强制640width-->
+    </head>
+    <body>
+        <div class="fixed-bg"></div>
+        <div class="container" id="all-container">
+            <div class="container" id="cover">
+                <img src="images/cover-content1.png" class="ab-block-img cover-content" id="cover-content1">
+                <img src="images/cover-content2.png" class="ab-block-img cover-content" id="cover-content2">
+                <img src="images/cover-content3.png" class="ab-block-img cover-content" id="cover-content3">
+                <img src="images/cover-content4.png" class="ab-block-img cover-content" id="cover-content4">
+                <img src="images/cover-content5.png" class="ab-block-img cover-content" id="cover-content5">
+                <img src="images/cover-content6.png" class="ab-block-img cover-content" id="cover-content6">
+                <img src="images/cover-content7.png" class="ab-block-img cover-content" id="cover-content7">
+            </div><!--/ cover end-->
+
+            <div class="container" id="page3">
+                <img src="images/page3-bottom.jpg" class="ab-block-img" id="page3-bottom">
+                <img src="images/page3-top.jpg" class="ab-block-img" id="page3-top">
+                <img src="images/page3-title.png" class="ab-block-img" id="page3-title">
+                <img src="images/page3-content.png" class="ab-block-img" id="page3-content">
+                <img src="images/page3-des.png" class="ab-block-img" id="page3-des">
+
+            </div><!--page3 end-->
+
+            <div class="container" id="page4">
+                <img src="images/page4-content.png"  class="ab-block-img" id="page4-content">
+
+                <div class="ab-element" id="form-container">
+                    <input type="text" placeholder="请输入您所在城市" class="input-element ab-element" id="city">
+                    <input type="text" placeholder="请输入您的姓名" class="input-element ab-element" id="name">
+                    <input type="tel" placeholder="请输入您的手机号码" class="input-element ab-element" id="phone">
+                </div>
+
+                <img src="images/apply-btn.png" class="ab-block-img" id="apply-btn">
+
+                <div class="container" id="sucess-container">
+                    <img src="images/sucess-pop.png" class="hvcenter" id="sucess-pop">
+                </div>
+
+            </div><!--/page4 end-->
+
+            <div class="container" id="page5">
+                <img src="images/page5-title.png" class="ab-block-img" id="page5-title">
+                <img src="images/page5-content.png" class="ab-block-img" id="page5-content">
+                <img src="images/page5-des.png" class="ab-block-img" id="page5-des">
+                <img src="images/share-btn.png" class="ab-block-img" id="share-btn">
+
+                <div class="container" id="share-container">
+                    <img src="images/share-arrow.png" class="ab-block-img" id="share-arrow">
+                    <img src="images/share-content.png" class="ab-block-img" id="share-content">
+
+                </div><!--/share-container-->
+
+            </div><!--/ page5 end-->
+
+            <div id="music-control">
+                <img src="images/music_bg.png"  id="music-control-main">
+                <img src="images/music_icon.png"  class="music-control-icon hvcenter">
+                <img src="images/music_icon.png"  class="music-control-icon hvcenter">
+                <img src="images/music_icon.png"  class="music-control-icon hvcenter">
+                <img src="images/music_icon.png"  class="music-control-icon hvcenter">
+                <img src="images/music_icon.png"  class="music-control-icon hvcenter">
+            </div><!--/music-control-->
+
+            <div class="ab-element" id="logo-group">
+                <img src="images/slogan.png" class="ab-block-img" id="slogan">
+                <img src="images/logo.png" class="ab-block-img" id="logo">
+            </div>
+
+            <img src="images/scan.png" class="ab-block-img" id="scan">
+
+            <img src="images/arrow-up.png"  class="hcenter" id="arrow-up">
+            <audio src="media/bgmusic.mp3" id="bg-music" preload="auto" loop="loop"></audio>
+
+
+        </div><!--/container end-->
+
+        <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+
+        <!-- build:js js/vendor/TweenMax.min.js -->
+        <script src="js/vendor/TweenMax.min.js"></script>
+        <!-- endbuild -->
+        <script src="js/vendor/touch.min.js"></script>
+
+        <!-- build:js js/main.min.js -->
+
+        <script src="js/main.js"></script>
+
+        <!-- endbuild -->
+
+    </body>
+</html>

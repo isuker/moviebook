@@ -1,0 +1,340 @@
+/*!
+**  Author: Kale Chao | FakeCityMan
+**  Blog: kalechao87@github.io
+**/
+@import "normalize-reset", "compass/css3";
+
+/*
+ * Remove the gap between images and the bottom of their containers
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+* Hide visually and from screenreaders, but maintain layout
+*/
+
+.invisible {
+   visibility: hidden;
+}
+
+/**
+ * Clearfix helper
+ * Used to contain floats: http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+ Author's custom styles
+ ========================================================================== */
+ *,
+ *:after,
+ *:before {
+    @include box-sizing(border-box);
+    // -webkit-user-select:none;
+    // -webkit-touch-callout:none;
+ }
+
+ html, body {
+    overflow: hidden;
+    height: 100%;
+}
+
+/* ==========================================================================
+ 定义变量
+ ========================================================================== */
+$main-bgcolor: #3a34af;
+$main-color: #fff;
+$main-red: #c50000;
+
+/* ==========================================================================
+定义变量结束
+========================================================================== */
+
+body {
+    font-family: 'Avenir Next', 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: $main-bgcolor;
+    color: $main-color;
+    overflow: hidden;
+    font: {
+        size: 24px;
+    }
+}
+
+.block-img {
+    display: block;
+    max-width: 100%;
+}
+
+.ab-img {
+    position: absolute;
+}
+
+.ab-block-img {
+    display: block;
+    position: absolute;
+    max-width: 100%;
+}
+
+.ab-element {
+    position: absolute;
+}
+
+.hvcenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate3d(-50%, -50%, 0));
+}
+
+.hcenter {
+    position: absolute;
+    left: 50%;
+    @include transform(translate3d(-50%, 0, 0));
+}
+
+.vcenter {
+    position: absolute;
+    top: 50%;
+    @include transform(translate3d(0, -50%, 0));
+}
+
+.fixed-bg {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../images/universal-bg.jpg');
+    @include background-size(cover);
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include background-size(cover);
+    overflow: hidden;
+}
+
+
+
+// music=======================================================================
+#music-control {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+
+    width: 58px;
+    height: 58px;
+    margin: 20px;
+}
+
+#music-control-main, .music-control-icon {
+    position: absolute;
+}
+
+.music-control-icon {
+    display: block;
+}
+// music=======================================================================
+
+
+// common page start===========================================================
+#logo-group {
+    top: 44px;
+    left: 106px;
+    width: 430px;
+    height: 466px;
+    // background: rgba(255, 0, 0, 0.3);
+    z-index: 10;
+}
+
+#slogan {
+    visibility: hidden;
+}
+
+#logo {
+    top: 395px;
+    left: 93px;
+    visibility: hidden;
+}
+
+#scan {
+    top: 434px;
+    left: 640px;
+    z-index: 10;
+}
+
+#arrow-up {
+    bottom: 10px;
+    visibility: hidden;
+    z-index: 10;
+}
+
+// common page end=============================================================
+
+// cover start================================================================
+#cover-content1 {
+    top: 573px;
+    left: 301px;
+}
+
+#cover-content2 {
+    top: 627px;
+    left: 163px;
+}
+
+#cover-content3 {
+    top: 676px;
+    left: 163px;
+}
+
+#cover-content4 {
+    top: 723px;
+    left: 193px;
+}
+
+#cover-content5 {
+    top: 776px;
+    left: 233px;
+}
+
+#cover-content6 {
+    top: 823px;
+    left: 121px;
+}
+
+#cover-content7 {
+    top: 873px;
+    left: 201px;
+}
+// cover end==================================================================
+
+// page3 start================================================================
+#page3-title {
+    top: 117px;
+    left: 43px;
+}
+
+#page3-content {
+    top: 248px;
+    left: 43px;
+}
+
+#page3-des {
+    bottom: 36px;
+    left: 42px;
+}
+// page3 end==================================================================
+
+// page4 start================================================================
+#page4-content {
+    top: 104px;
+    left: 67px;
+}
+#form-container {
+    top: 372px;
+    left: 59px;
+    width: 522px;
+    height: 424px;
+    background-image: url('../images/form-bg.png');
+}
+
+#apply-btn {
+    top: 888px;
+    left: 212px;
+}
+
+.input-element {
+    left: 160px;
+    width: 290px;
+    height: 48px;
+    // background: rgba(255, 0, 0, 0.5);
+    border: none;
+    color: #0036b2;
+    padding: {
+        left: 12px;
+    }
+}
+
+#city {
+    top: 206px;
+}
+
+#name {
+    top: 265px;
+}
+
+#phone {
+    top: 327px;
+}
+
+#sucess-container {
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 20;
+}
+// page4 end=================================================================
+
+// page5 start===============================================================
+#page5-title {
+    top: 103px;
+    left: 223px;
+}
+
+#page5-content {
+    top: 194px;
+    left: 105px;
+}
+
+#page5-des {
+    top: 728px;
+    left: 136px;
+}
+
+#share-btn {
+    top: 888px;
+    left: 212px;
+}
+
+#share-container {
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 20;
+}
+
+#share-arrow {
+    top: 78px;
+    left: 440px;
+}
+
+#share-content {
+    top: 380px;
+    left: 98px;
+}
+// page5 end=================================================================
+
+#cover, #page3, #page4, #sucess-container, #page5, #share-container {
+    visibility: hidden;
+}
