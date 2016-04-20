@@ -370,7 +370,7 @@ body {
 
 #music-control {
   position: absolute;
-  z-index: 999;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 58px;
@@ -391,7 +391,6 @@ body {
   left: 106px;
   width: 430px;
   height: 466px;
-  z-index: 10;
 }
 
 #slogan {
@@ -407,7 +406,6 @@ body {
 #scan {
   top: 434px;
   left: 640px;
-  z-index: 10;
 }
 
 #arrow-up {

@@ -141,7 +141,7 @@
             paused: true,
         });
 
-        page4Show.set("#page4", {autoAlpha: 1})
+        page4Show.set("#page4", {autoAlpha: 1, perspective: 500})
                 .fromTo("#page4-content", 0.8, {autoAlpha: 0, x: "-=640"}, {autoAlpha: 1, x: 0})
                 .fromTo("#form-container", 0.8, {autoAlpha: 0, z: -300}, {autoAlpha: 1, z: 0})
                 .fromTo("#apply-btn", 0.6, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0})
@@ -153,7 +153,7 @@
             }
         });
 
-        page4Vanish.to("#page4", 0.6, {autoAlpha: 0, delay: 2});
+        page4Vanish.to(["#page4", "#sucess-container"], 0.6, {autoAlpha: 0, delay: 2});
 
         function sucessShow() {
             TweenMax.fromTo("#sucess-container", 0.6, {autoAlpha: 0}, {autoAlpha: 1, onComplete: function () {
@@ -169,7 +169,7 @@
             paused: true,
         });
 
-        page5Show.set("#page5", {autoAlpha: 1})
+        page5Show.set("#page5", {autoAlpha: 1, perspective: 500})
                 .to("#logo-group", 0.8, {scale: 0.68, top: "301px", left: "110px"})
                 .fromTo("#page5-title", 0.8, {autoAlpha: 0, z: -300}, {autoAlpha: 1, z: 0})
                 .fromTo("#page5-content", 0.8, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0})
