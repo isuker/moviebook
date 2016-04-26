@@ -70,7 +70,7 @@
 
         //cover AN start=====================================================
         var coverShow = new TimelineMax({
-            // paused: true,
+            paused: true,
             onComplete: function () {
                 showArrow();
                 // 上滑
@@ -139,13 +139,15 @@
 
         // page4 start=========================================================
         var page4Show = new TimelineMax({
-            paused: true,
+            // paused: true,
         });
 
         page4Show.set("#page4", {autoAlpha: 1, perspective: 500})
                 .fromTo("#page4-content", 0.8, {autoAlpha: 0, x: "-=640"}, {autoAlpha: 1, x: 0})
-                .fromTo("#form-container", 0.8, {autoAlpha: 0, z: -300}, {autoAlpha: 1, z: 0})
-                .fromTo("#apply-btn", 0.6, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0})
+                .fromTo("#page4-bg", 0.8, {autoAlpha: 0}, {autoAlpha: 1, ease: Power1.easeIn})
+                .fromTo("#form-dec", 0.8, {autoAlpha: 0, z: -300}, {autoAlpha: 1, z: 0}, "-=0.6")
+                .fromTo("#form-container", 0.8, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0})
+                .fromTo("#apply-btn", 0.6, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0}, "-=0.6")
 
         var page4Vanish = new TimelineMax({
             paused: true,
@@ -154,15 +156,14 @@
             }
         });
 
-        page4Vanish.to(["#page4", "#sucess-container"], 0.6, {autoAlpha: 0, delay: 2});
+        page4Vanish.to("#page4", 0.6, {autoAlpha: 0});
 
-        function sucessShow() {
-            TweenMax.fromTo("#sucess-container", 0.6, {autoAlpha: 0}, {autoAlpha: 1, onComplete: function () {
-                page4Vanish.play(0);
-            }})
-        }
 
-        $('#apply-btn').bind("click", sucessShow);
+
+        $('#apply-btn').bind("click", function () {
+            // 先校验填写信息，然后page4消失
+            page4Vanish.play(0);
+        });
         // page4 end===========================================================
 
         // page5 start========================================================

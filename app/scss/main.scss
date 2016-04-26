@@ -258,13 +258,18 @@ body {
 // page4 start================================================================
 #page4-content {
     top: 104px;
-    left: 67px;
+    left: 66px;
 }
+#form-dec {
+    top: 369px;
+    left: 97px;
+}
+
 #form-container {
-    top: 372px;
-    left: 59px;
-    width: 522px;
-    height: 424px;
+    top: 649px;
+    left: 88px;
+    width: 421px;
+    height: 165px;
     background-image: url('../images/form-bg.png');
 }
 
@@ -274,33 +279,30 @@ body {
 }
 
 .input-element {
-    left: 160px;
+    left: 132px;
     width: 290px;
     height: 48px;
-    // background: rgba(255, 0, 0, 0.5);
+    background: rgba(255, 0, 0, 0);
     border: none;
     color: #0036b2;
     padding: {
         left: 12px;
     }
+    line-height: 48px;
 }
 
 #city {
-    top: 206px;
+    top: 0px;
 }
 
 #name {
-    top: 265px;
+    top: 58px;
 }
 
 #phone {
-    top: 327px;
+    top: 116px;
 }
 
-#sucess-container {
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 20;
-}
 // page4 end=================================================================
 
 // page5 start===============================================================
@@ -340,6 +342,6 @@ body {
 }
 // page5 end=================================================================
 
-#cover, #page3, #page4, #sucess-container, #page5, #share-container {
+#cover, #page3, #page4, #page5, #share-container {
     visibility: hidden;
 }
