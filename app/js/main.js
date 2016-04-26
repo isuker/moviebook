@@ -70,7 +70,7 @@
 
         //cover AN start=====================================================
         var coverShow = new TimelineMax({
-            paused: true,
+            // paused: true,
             onComplete: function () {
                 showArrow();
                 // 上滑
@@ -139,7 +139,7 @@
 
         // page4 start=========================================================
         var page4Show = new TimelineMax({
-            // paused: true,
+            paused: true,
         });
 
         page4Show.set("#page4", {autoAlpha: 1, perspective: 500})
@@ -172,11 +172,11 @@
         });
 
         page5Show.set("#page5", {autoAlpha: 1, perspective: 500})
-                .to("#logo-group", 0.8, {scale: 0.68, top: "301px", left: "110px"})
-                .fromTo("#page5-title", 0.8, {autoAlpha: 0, z: -300}, {autoAlpha: 1, z: 0})
+                .to("#logo-group", 0.8, {scale: 0.52, top: "450px", left: "104px"})
+                .fromTo("#thanks", 0.6, {autoAlpha: 0, z: 100}, {autoAlpha: 1, z: 0})
+                .fromTo("#page5-title", 0.8, {autoAlpha: 0, z: -200}, {autoAlpha: 1, z: 0})
                 .fromTo("#page5-content", 0.8, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0})
-                .fromTo("#page5-des", 1, {autoAlpha: 0, z: -300}, {autoAlpha: 1, z: 0})
-                .fromTo("#share-btn", 0.6, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0})
+                .fromTo("#page5-des", 1, {autoAlpha: 0, z: -200}, {autoAlpha: 1, z: 0})
 
         function shareShow() {
             var shareShow = new TimelineMax();
