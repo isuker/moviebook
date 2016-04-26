@@ -98,12 +98,75 @@
         var coverVanish = new TimelineMax({
             paused: true,
             onComplete: function () {
-                page3Show.play(0);
+                page1Show.play(0);
             }
         });
 
         coverVanish.to("#cover", 0.6, {autoAlpha: 0})
                     .fromTo("#logo-group", 0.6, {scale: 1, top: "44px", left: "106px"}, {scale: 0.3, top: "-148px", left: "322px"})
+        // page1 start=========================================================
+        var page1Show = new TimelineMax({
+            paused: true,
+            onComplete: function () {
+                showArrow();
+                // 上滑
+                touch.on($("#page1"), 'swipeup', function(ev){
+                    console.log(ev.type + ' page1');
+                    hideArrow();
+                    page1Vanish.play(0);
+                });
+            }
+        });
+
+        page1Show.set("#page1", {autoAlpha: 1})
+                .fromTo("#page1-title", 0.8, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0})
+                .fromTo("#page1-content", 0.8, {autoAlpha: 0, x: "-=640"}, {autoAlpha: 1, x: 0}, "-=0.4")
+                .fromTo("#page1-bottom", 0.8, {autoAlpha: 0}, {autoAlpha: 1, ease: Power1.easeIn})
+                .fromTo("#scan", 1.6, {x: -660}, {x: -0}, "+=0.2")
+                .fromTo("#page1-top", 0.8, {autoAlpha: 0}, {autoAlpha: 1}, "-=0.8")
+                .fromTo("#page1-des", 0.8, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0}, "-=0.3")
+
+        var page1Vanish = new TimelineMax({
+            paused: true,
+            onComplete: function () {
+                page2Show.play(0);
+            }
+        });
+
+        page1Vanish.to("#page1", 0.6, {autoAlpha: 0});
+        // page1 end===========================================================
+
+        // page2 start=========================================================
+        var page2Show = new TimelineMax({
+            paused: true,
+            onComplete: function () {
+                showArrow();
+                // 上滑
+                touch.on($("#page2"), 'swipeup', function(ev){
+                    console.log(ev.type + ' page2');
+                    hideArrow();
+                    page2Vanish.play(0);
+                });
+            }
+        });
+
+        page2Show.set("#page2", {autoAlpha: 1})
+                .fromTo("#page2-title", 0.8, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0})
+                .fromTo("#page2-content", 0.8, {autoAlpha: 0, x: "-=640"}, {autoAlpha: 1, x: 0}, "-=0.4")
+                .fromTo("#page2-bottom", 0.8, {autoAlpha: 0}, {autoAlpha: 1, ease: Power1.easeIn})
+                .fromTo("#scan", 1.6, {x: 0}, {x: -660}, "+=0.2")
+                .fromTo("#page2-top", 0.8, {autoAlpha: 0}, {autoAlpha: 1}, "-=0.8")
+                .fromTo("#page2-des", 0.8, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0}, "-=0.3")
+
+        var page2Vanish = new TimelineMax({
+            paused: true,
+            onComplete: function () {
+                page3Show.play(0);
+            }
+        });
+
+        page2Vanish.to("#page2", 0.6, {autoAlpha: 0});
+        // page2 end===========================================================
 
         // page3 start=========================================================
         var page3Show = new TimelineMax({

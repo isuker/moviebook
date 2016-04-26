@@ -239,17 +239,17 @@ body {
 // cover end==================================================================
 
 // page3 start================================================================
-#page3-title {
+#page1-title, #page2-title, #page3-title {
     top: 117px;
     left: 43px;
 }
 
-#page3-content {
+#page1-content, #page2-content, #page3-content {
     top: 248px;
     left: 43px;
 }
 
-#page3-des {
+#page1-des, #page2-des, #page3-des {
     bottom: 36px;
     left: 42px;
 }
@@ -327,6 +327,6 @@ body {
 }
 // page5 end=================================================================
 
-#cover, #page3, #page4, #page5, #share-container {
+#cover, #page1, #page2, #page3, #page4, #page5, #share-container {
     visibility: hidden;
 }
