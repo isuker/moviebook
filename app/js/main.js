@@ -219,7 +219,7 @@
             }
         });
 
-        page4Vanish.to("#page4", 0.6, {autoAlpha: 0});
+        page4Vanish.to(["#page4", "#logo-group"], 0.6, {autoAlpha: 0});
 
 
 
@@ -235,11 +235,13 @@
         });
 
         page5Show.set("#page5", {autoAlpha: 1, perspective: 500})
-                .to("#logo-group", 0.8, {scale: 0.52, top: "450px", left: "104px"})
+
                 .fromTo("#thanks", 0.6, {autoAlpha: 0, z: 100}, {autoAlpha: 1, z: 0})
                 .fromTo("#page5-title", 0.8, {autoAlpha: 0, z: -200}, {autoAlpha: 1, z: 0})
                 .fromTo("#page5-content", 0.8, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0})
-                .fromTo("#page5-des", 1, {autoAlpha: 0, z: -200}, {autoAlpha: 1, z: 0})
+                // .to("#logo-group", 0.8, {scale: 0.52, top: "450px", left: "104px"})
+                .fromTo("#page5-logo", 1, {autoAlpha: 0, z: -200}, {autoAlpha: 1, z: 0})
+                .fromTo("#page5-des", 0.8, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0}, "-=0.4")
 
         function shareShow() {
             var shareShow = new TimelineMax();
