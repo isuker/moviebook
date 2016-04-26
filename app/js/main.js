@@ -86,6 +86,7 @@
                 .set(["#all-container", "#cover"], {perspective: 500})
                 .set("#logo-group", {scale: 1, top: "44px", left: "106px"})
                 .staggerFromTo(["#slogan","#logo"], 1, {autoAlpha: 0, z: -300}, {autoAlpha: 1, z: 0}, 0.3)
+                .fromTo("#cover-border", 0.8, {autoAlpha: 0, z: 50}, {autoAlpha: 1, z: 0})
                 .fromTo("#cover-content1", 0.6, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1})
                 .fromTo("#cover-content2", 1, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1})
                 .fromTo("#cover-content3", 1, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1}, "-=0.3")
