@@ -84,16 +84,17 @@
 
         coverShow.set("#cover", {autoAlpha: 1})
                 .set(["#all-container", "#cover"], {perspective: 500})
-                .set("#logo-group", {scale: 1, top: "44px", left: "106px"})
-                .staggerFromTo(["#slogan","#logo"], 1, {autoAlpha: 0, z: -300}, {autoAlpha: 1, z: 0}, 0.3)
+                .set("#logo-group", {scale: 1, top: "44px", left: "106px", autoAlpha: 1})
+                .staggerFromTo(["#slogan","#logo"], 1, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1}, 0.3)
                 .fromTo("#cover-border", 0.8, {autoAlpha: 0, z: 50}, {autoAlpha: 1, z: 0})
-                .fromTo("#cover-content1", 0.6, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1})
-                .fromTo("#cover-content2", 1, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1})
-                .fromTo("#cover-content3", 1, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1}, "-=0.3")
-                .fromTo("#cover-content4", 0.8, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1})
-                .fromTo("#cover-content5", 1, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1})
-                .fromTo("#cover-content6", 1, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1})
-                .fromTo("#cover-content7", 1, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1}, "-=0.8")
+                .staggerFromTo(".cover-content", 0.8, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1}, 0.3)
+                // .fromTo("#cover-content1", 0.6, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1})
+                // .fromTo("#cover-content2", 1, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1})
+                // .fromTo("#cover-content3", 1, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1}, "-=0.3")
+                // .fromTo("#cover-content4", 0.8, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1})
+                // .fromTo("#cover-content5", 1, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1})
+                // .fromTo("#cover-content6", 1, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1})
+                // .fromTo("#cover-content7", 1, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1}, "-=0.8")
 
         var coverVanish = new TimelineMax({
             paused: true,
@@ -114,6 +115,17 @@
                     console.log(ev.type + ' page1');
                     hideArrow();
                     page1Vanish.play(0);
+                });
+
+                // 上滑
+                touch.on($("#page1"), 'swipedown', function(ev){
+                    console.log(ev.type + ' page1');
+                    hideArrow();
+                    TweenMax.to(["#page1", "#logo-group"], 0.6, {autoAlpha: 0, onComplete: function () {
+                        TweenMax.set("#logo-group", {scale: 1, top: "44px", left: "106px"});
+                        TweenMax.set(["#all-container", "#cover"], {perspective: 500});
+                        coverShow.play(0);
+                    }});
                 });
             }
         });
@@ -147,6 +159,15 @@
                     hideArrow();
                     page2Vanish.play(0);
                 });
+
+                // 下滑
+                touch.on($("#page2"), 'swipedown', function(ev){
+                    console.log(ev.type + ' page2');
+                    hideArrow();
+                    TweenMax.to("#page2", 0.6, {autoAlpha: 0, onComplete: function () {
+                        page1Show.play(0);
+                    }});
+                });
             }
         });
 
@@ -179,6 +200,15 @@
                     hideArrow();
                     page3Vanish.play(0);
                 });
+
+                // 下滑
+                touch.on($("#page3"), 'swipedown', function(ev){
+                    console.log(ev.type + ' page3');
+                    hideArrow();
+                    TweenMax.to("#page3", 0.6, {autoAlpha: 0, onComplete: function () {
+                        page2Show.play(0);
+                    }});
+                });
             }
         });
 
@@ -203,6 +233,15 @@
         // page4 start=========================================================
         var page4Show = new TimelineMax({
             paused: true,
+            onComplete: function () {
+                // 下滑
+                touch.on($("#page4"), 'swipedown', function(ev){
+                    console.log(ev.type + ' page3');
+                    TweenMax.to("#page4", 0.6, {autoAlpha: 0, onComplete: function () {
+                        page3Show.play(0);
+                    }});
+                });
+            }
         });
 
         page4Show.set("#page4", {autoAlpha: 1, perspective: 500})
@@ -232,6 +271,16 @@
         // page5 start========================================================
         var page5Show = new TimelineMax({
             paused: true,
+            onComplete: function () {
+                // 下滑
+                touch.on($("#page5"), 'swipedown', function(ev){
+                    console.log(ev.type + ' page5');
+                    TweenMax.to("#page5", 0.6, {autoAlpha: 0, onComplete: function () {
+                        TweenMax.to("#logo-group", 0.4, {autoAlpha: 1});
+                        page4Show.play(0);
+                    }});
+                });
+            }
         });
 
         page5Show.set("#page5", {autoAlpha: 1, perspective: 500})
@@ -242,27 +291,6 @@
                 // .to("#logo-group", 0.8, {scale: 0.52, top: "450px", left: "104px"})
                 .fromTo("#page5-logo", 1, {autoAlpha: 0, z: -200}, {autoAlpha: 1, z: 0})
                 .fromTo("#page5-des", 0.8, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0}, "-=0.4")
-
-        function shareShow() {
-            var shareShow = new TimelineMax();
-            shareShow.set("#share-container", {perspective: 500})
-                    .fromTo("#share-container", 0.6, {autoAlpha: 0}, {autoAlpha: 1})
-                    .fromTo("#share-arrow", 0.6, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0})
-                    .fromTo("#share-content", 1, {autoAlpha: 0, z: -300}, {autoAlpha: 1, z: 0}, "-=0.2")
-
-        }
-
-        function shareHide() {
-            var shareHide = new TimelineMax({
-                onComplete: function () {
-                    TweenMax.set(["#share-arrow", "#share-content"], {autoAlpha: 0});
-                }
-            });
-            shareHide.fromTo("#share-container", 0.6, {autoAlpha: 1}, {autoAlpha: 0})
-        }
-
-        $('#share-btn').bind("click", shareShow);
-        $('#share-container').bind("click", shareHide);
         // page5 end==========================================================
 
 

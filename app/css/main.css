@@ -481,8 +481,8 @@ body {
 
 #form-container {
   top: 649px;
-  left: 88px;
-  width: 421px;
+  left: 136px;
+  width: 372px;
   height: 165px;
   background-image: url("../images/form-bg.png");
 }
@@ -493,7 +493,7 @@ body {
 }
 
 .input-element {
-  left: 132px;
+  left: 84px;
   width: 290px;
   height: 48px;
   background: rgba(255, 0, 0, 0);
