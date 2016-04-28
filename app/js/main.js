@@ -123,7 +123,6 @@
                     hideArrow();
                     TweenMax.to(["#page1", "#logo-group"], 0.6, {autoAlpha: 0, onComplete: function () {
                         TweenMax.set("#logo-group", {scale: 1, top: "44px", left: "106px"});
-                        TweenMax.set(["#all-container", "#cover"], {perspective: 500});
                         coverShow.play(0);
                     }});
                 });
@@ -249,7 +248,8 @@
                 .fromTo("#page4-bg", 0.8, {autoAlpha: 0}, {autoAlpha: 1, ease: Power1.easeIn})
                 .fromTo("#form-dec", 0.8, {autoAlpha: 0, z: -300}, {autoAlpha: 1, z: 0}, "-=0.6")
                 .fromTo("#form-container", 0.8, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0})
-                .fromTo("#apply-btn", 0.6, {autoAlpha: 0, y: "+=50"}, {autoAlpha: 1, y: 0}, "-=0.6")
+                .fromTo("#apply-btn", 0.6, {autoAlpha: 0, x: "-=320"}, {autoAlpha: 1, x: 0}, "-=0.6")
+                .fromTo("#backhome-btn", 0.6, {autoAlpha: 0, x: "+=320"}, {autoAlpha: 1, x: 0}, "-=0.6")
 
         var page4Vanish = new TimelineMax({
             paused: true,
@@ -265,6 +265,28 @@
         $('#apply-btn').bind("click", function () {
             // 先校验填写信息，然后page4消失
             page4Vanish.play(0);
+        });
+
+        function showAlert() {
+            var alertShow = new TimelineMax();
+            alertShow.fromTo("#info-alert", 0.3, {autoAlpha: 0}, {autoAlpha: 1})
+                    .fromTo("#confirm", 0.5, {autoAlpha: 0, scale: 0}, {autoAlpha: 1, scale: 1, ease: Back.easeOut.config(1.2)}, "-=0.2")
+        }
+
+        function hideAlert() {
+            var alertHide = new TimelineMax();
+            alertHide.fromTo("#confirm", 0.5, {autoAlpha: 1, scale: 1}, {autoAlpha: 0, scale: 0, ease: Back.easeIn.config(1.2)})
+                    .fromTo("#info-alert", 0.3, {autoAlpha: 1}, {autoAlpha: 0}, "-=0.2")
+        }
+
+        $("#confirm-btn").bind("click", hideAlert);
+
+        // 点击返回首页
+        $("#backhome-btn").bind("click", function () {
+            TweenMax.to(["#page4", "#logo-group"], 0.6, {autoAlpha: 0, onComplete: function () {
+                TweenMax.set("#logo-group", {scale: 1, top: "44px", left: "106px"});
+                coverShow.play(0);
+            }});
         });
         // page4 end===========================================================
 

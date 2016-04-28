@@ -275,7 +275,12 @@ body {
 
 #apply-btn {
     top: 890px;
-    left: 233px;
+    left: 121px;
+}
+
+#backhome-btn {
+    top: 890px;
+    left: 343px;
 }
 
 .input-element {
@@ -303,12 +308,30 @@ body {
     top: 120px;
 }
 
+#info-alert {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#confirm {
+    $confirm-bg: "../images/confirm-bg.png";
+    top: 282px;
+    left: 146px;
+    width: image-width($confirm-bg);
+    height: image-height($confirm-bg);
+    background-image: url($confirm-bg);
+}
+
+#confirm-btn {
+    top: 130px;
+    left: 114px;
+}
+
 // page4 end=================================================================
 
 // page5 start===============================================================
 #thanks {
-    top: 85px;
-    left: 98px;
+    top: 41px;
+    left: 44px;
 }
 
 #page5-title {
@@ -332,6 +355,6 @@ body {
 }
 // page5 end=================================================================
 
-#cover, #page1, #page2, #page3, #page4, #page5, #share-container {
+#cover, #page1, #page2, #page3, #page4, #page5, #share-container, #info-alert {
     visibility: hidden;
 }
